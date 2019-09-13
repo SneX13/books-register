@@ -27,8 +27,11 @@ public class BookRegister {
 
     public void listAllBooks() {
         System.out.println("Book register holds following books: ");
+
         for (Book book : this.books) {
-            System.out.println(book.bookInfo());
+            System.out.println("" + book.getTitle() + " " + book.getAuthor() + " " +
+                    book.getPublisher() + " " + book.getPublicationYear() + " " +
+                    book.getPages() + " " + book.getBookIdentifier());
             System.out.println("###############################################");
         }
     }

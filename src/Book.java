@@ -59,10 +59,4 @@ public class Book {
         this.borrowed = true;
     }
 
-    public String bookInfo() {
-        String bookDetails = "" + this.getTitle() + " " + this.getAuthor() + " " +
-                this.getPublisher() + " " + this.getPublicationYear() + " " +
-                this.getPages() + " " + this.getBookIdentifier();
-        return bookDetails;
-    }
 }
