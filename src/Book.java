@@ -1,7 +1,7 @@
 import java.util.Date; // use for publication year
 
 /**
- * The Book class represents a book.
+ * A class to model a book in book register.
  */
 public class Book {
 
@@ -15,7 +15,7 @@ public class Book {
     private boolean borrowed;
 
     /**
-     * Set the fields title, author, publisher, publicationYear, pages and book identifier EAN-13 when this object
+     * Set the title, author, publisher, publicationYear, pages and book identifier EAN-13 fields when this object
      * is constructed.
      */
     public Book(String bookTitle, String bookAuthor, String bookPublisher, int bookPublicationYear, int bookPages, String ean13) {
@@ -27,34 +27,58 @@ public class Book {
         bookIdentifier = ean13;
     }
 
+    /**
+     * @return book title as String
+     */
     public String getTitle() {
         return this.title;
     }
 
+    /**
+     * @return book author name as String
+     */
     public String getAuthor() {
         return this.author;
     }
 
+    /**
+     * @return book publisher name as String
+     */
     public String getPublisher() {
         return this.publisher;
     }
 
+    /**
+     * @return the year in which book has been published in YYYY format
+     */
     public int getPublicationYear() {
         return this.publicationYear;
     }
 
+    /**
+     * @return number of pages in the book
+     */
     public int getPages() {
         return this.pages;
     }
 
+    /**
+     * @return book's barcode (EAN-13) / ISBN-13 as String
+     */
     public String getBookIdentifier() {
         return this.bookIdentifier;
     }
 
+    /**
+     * @return boolean representing if book has been borrowed or is it available
+     */
     public boolean isBorrowed() {
         return this.borrowed;
     }
 
+    /**
+     * A method that registers that book has been borrowed.
+     */
     public void setBorrowed() {
         this.borrowed = true;
     }
